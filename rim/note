@@ -1,0 +1,15 @@
+match (h:House),(p),(p)-[r:nearBy]->(h)
+delete r,h,p
+
+match (n) delete n
+
+match (h:House),(p:Point),(p)-[:nearBy]->(h) return h,p
+
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=10.7902440694709,106.70907762698403&radius=500&key=AIzaSyC9VVLu7knKJrANG81A6Qcr9e21lmkAXQo
+
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=10.7902440694709,106.70907762698403&radius=500&key=AIzaSyC9VVLu7knKJrANG81A6Qcr9e21lmkAXQo&type=street
+
+https://roads.googleapis.com/v1/snapToRoads?key=AIzaSyC9VVLu7knKJrANG81A6Qcr9e21lmkAXQo&path=60.170880,24.942795
+
+60.170880,24.942795
+60.170877918672588,24.942699821922421
